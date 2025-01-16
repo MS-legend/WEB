@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Область уведомлений -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Верхняя часть страницы -->
+    <header>
+        <div class="logo">
+            <h1>Магазин</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Поиск товара...">
+            <button id="search-button">Найти</button>
+            <ul id="autocomplete-list" class="autocomplete-list"></ul> <!-- Список автодополнений -->
+        </div>
+        <div class="header-icons">
+            <a href="index.html"><button>Главная стр.</button></a>
+            <button id="back-button">Назад</button>
+            <button id="forward-button">Вперед</button>
+            <a href="cart.html"><img src="cart-icon.png" alt="Корзина"></a>
+            <a href="profile.html"><img src="user-icon.png" alt="Профиль"></a>
+            <button id="close-button">X</button>
+        </div>
+    </header>
+
+    <!-- Центральная часть страницы -->
+    <main>
+        <div class="sidebar">
+            <h3>Фильтры</h3>
+
+            <div class="filter-category">
+                <h4>Категории</h4>
+                <label><input type="checkbox" name="category" value="category1"> Категория 1</label><br>
+                <label><input type="checkbox" name="category" value="category2"> Категория 2</label><br>
+                <label><input type="checkbox" name="category" value="category3"> Категория 3</label><br>
+                <label><input type="checkbox" name="category" value="category4"> Категория 4</label><br>
+                <label><input type="checkbox" name="category" value="category5"> Категория 5</label><br>
+            </div>
+
+            <div class="filter-price">
+                <h4>Стоимость</h4>
+                <label>Цена от: <input type="number" id="filter-price-from"></label><br>
+                <label>Цена до: <input type="number" id="filter-price-to"></label><br>
+                <label><input type="checkbox" id="filter-discount"> Только товары со скидкой</label><br>
+            </div>
+
+            <button id="apply-filters">Применить фильтры</button>
+        </div>
+
+        <section id="product-catalog">
+            <h2>Каталог</h2>
+            
+            <div class="sort-options">
+                <select id="sort-select">
+                    <option value="price-asc">По цене (возрастание)</option>
+                    <option value="price-desc">По цене (убывание)</option>
+                    <option value="rating-asc">По рейтингу (возрастание)</option>
+                    <option value="rating-desc">По рейтингу (убывание)</option>
+                </select>
+            </div>
+
+            <div id="product-list" class="product-list">
+                <!-- Товары будут загружаться сюда -->
+            </div>
+
+            <button id="load-more-products">Загрузить ещё</button>
+        </section>
+    </main>
+
+    <!-- Нижняя часть страницы -->
+    <footer>
+        <p>© 2025 Магазин | Все права защищены</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+<header>
+  <div class="logo">
+      <img src="https://avatars.mds.yandex.net/i?id=708247fa8fe4809c73b336f57d597bd24ee71c6b-13092708-images-thumbs&n=13" alt="Логотип">
+  </div>
+  <div class="header-icons">
+      <button>...</button>
+  </div>
+</header>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Область уведомлений -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Верхняя часть страницы -->
+    <header>
+        <div class="logo">
+            <h1>Магазин</h1>
+        </div>
+        <div class="header-icons">
+            <a href="index.html"><button>Главная стр.</button></a>
+            <a href="profile.html"><button>Личный кабинет</button></a>
+        </div>
+    </header>
+
+    <!-- Область уведомлений -->
+    <div id="notification" class="notification">
+        Корзина обновлена!
+    </div>
+
+    <!-- Содержимое корзины -->
+    <main>
+        <h2>Корзина</h2>
+
+        <div id="cart-items" class="product-list">
+            <!-- Здесь будут отображаться товары в корзине -->
+        </div>
+
+        <div id="empty-cart-message" class="empty-cart-message">
+            Корзина пуста. Перейдите в каталог, чтобы добавить товары.
+        </div>
+
+        <div id="order-form" class="order-form">
+            <h3>Оформление заказа</h3>
+            <form id="checkout-form">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="phone">Телефон:</label>
+                <input type="text" id="phone" name="phone" required><br>
+
+                <label for="consent">Согласие на рассылку:</label>
+                <input type="checkbox" id="consent" name="consent"><br>
+
+                <label for="address">Адрес доставки:</label>
+                <input type="text" id="address" name="address" required><br>
+
+                <label for="delivery-date">Дата доставки:</label>
+                <input type="date" id="delivery-date" name="delivery-date" required><br>
+
+                <label for="delivery-time">Временной интервал доставки:</label>
+                <select id="delivery-time" name="delivery-time" required>
+                    <option value="09:00-12:00">09:00 - 12:00</option>
+                    <option value="12:00-15:00">12:00 - 15:00</option>
+                    <option value="15:00-18:00">15:00 - 18:00</option>
+                </select><br>
+
+                <label for="comment">Комментарий к заказу:</label><br>
+                <textarea id="comment" name="comment"></textarea><br>
+
+                <button type="submit">Оформить заказ</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Нижняя часть страницы -->
+    <footer>
+        <p>© 2025 Магазин | Все права защищены</p>
+        <p>Контакты: info@shop.ru</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
